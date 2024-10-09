@@ -17,7 +17,7 @@
 
 ```bash
 git clone https://github.com/burgutov/weather_microservice
-cd weather-microservice
+cd weather_microservice
 ```
 
 ### Запуск с использованием Docker
