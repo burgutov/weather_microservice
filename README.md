@@ -16,7 +16,7 @@
 Сначала клонируйте репозиторий на вашу локальную машину:
 
 ```bash
-git clone <URL>
+git clone https://github.com/burgutov/weather_microservice
 cd weather-microservice
 ```
 
