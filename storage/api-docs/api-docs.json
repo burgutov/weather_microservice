@@ -1,0 +1,86 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Weather Microservice API",
+        "description": "API для получения данных о погоде",
+        "contact": {
+            "name": "Ramazan",
+            "email": "r.burgutov@gmail.com"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/cities/{id}/weather": {
+            "get": {
+                "tags": [
+                    "Weather"
+                ],
+                "summary": "Получить данные о погоде для города",
+                "operationId": "040af14e6a5ee244a71e431a6e274589",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID города",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Успешный ответ",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Weather"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Данные о погоде не найдены"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Weather": {
+                "properties": {
+                    "city_id": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "city_name": {
+                        "type": "string",
+                        "example": "Москва"
+                    },
+                    "temperature": {
+                        "type": "number",
+                        "format": "float",
+                        "example": 25.5
+                    },
+                    "description": {
+                        "type": "string",
+                        "example": "Солнечно"
+                    },
+                    "updated_at": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2024-10-09T11:22:56"
+                    }
+                },
+                "type": "object"
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Weather",
+            "description": "Weather"
+        }
+    ]
+}
