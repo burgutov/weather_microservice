@@ -32,7 +32,7 @@ return [
     ],
 
     'weather' => [
-        'api_key' => env('WEATHER_API_KEY', 'ваш_ключ_по_умолчанию'),
+        'api_key' => env('WEATHER_API_KEY', 'f22448af49853e6f5e64e7b72aedab88'),
     ],
 
 ];

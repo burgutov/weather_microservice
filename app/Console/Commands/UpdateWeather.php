@@ -24,6 +24,7 @@ class UpdateWeather extends Command
         $cities = City::all();
 
         foreach ($cities as $city) {
+            
             $weatherData = $this->weatherService->fetchWeatherData($city->latitude, $city->longitude);
 
             if ($weatherData === null) {

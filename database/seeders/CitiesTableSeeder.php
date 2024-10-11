@@ -13,6 +13,7 @@ class CitiesTableSeeder extends Seeder
      */
     public function run()
     {
+        
         $cities = [
             ['name' => 'New York', 'latitude' => 40.7128, 'longitude' => -74.0060],
             ['name' => 'Los Angeles', 'latitude' => 34.0522, 'longitude' => -118.2437],

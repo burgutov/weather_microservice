@@ -55,7 +55,7 @@ class WeatherController extends Controller
 
         return response()->json([
             'city_id' => $weather->city_id,
-            'city_name' => $weather->city->name, // Используем связь для получения имени города
+            'city_name' => $weather->city->name, 
             'temperature' => $weather->temperature,
             'description' => $weather->description,
             'updated_at' => $weather->updated_at,

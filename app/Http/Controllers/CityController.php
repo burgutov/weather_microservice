@@ -28,7 +28,7 @@ class CityController extends Controller
         ]);
 
         City::create($request->all());
-        return redirect()->route('cities.index')->with('success', 'City added successfully.');
+        return redirect()->route('cities.index')->with('success', 'Город успешно добавлен');
     }
 
 }
